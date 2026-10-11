@@ -6,9 +6,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
     plugins: [react(), basicSsl()],
     build: {
+        // GitHub Pages is publishing the /docs folder from the main branch.
         outDir: './docs',
     },
-    base: './',
+    // This repository is hosted at /telegram-mini-app/ on GitHub Pages.
+    base: '/telegram-mini-app/',
     server: {
         port: 5174,
     },
